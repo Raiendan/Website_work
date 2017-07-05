@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="language" content="deutsch, de">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PfaJuKo</title>
+		<meta name="description" content="Offizielle Webseite der Pfarrjugend St. Konrad. Striewald in Aschaffenburg" />
+		<meta name="keywords" content="Pfarrjugend, St. Konrad, Strietwald, Aschaffenburg, CBA, Christbaumaktion, Zeltlager, Sternsinger, Klappern, Pfajuko, Anmeldung, Ehrenamt" />
+		<meta name="page-topic" content="Ehrenamt, Jugendarbeit">
+        <link rel="stylesheet" type="text/css" href="indexcss/navmo.css" />
+        <link rel="stylesheet" type="text/css" href="css/navpc.css" />
+        <link rel="stylesheet" type="text/css" href="css/mediabox.css" />
+        <link rel="stylesheet" type="text/css" href="css/fade.css" />
+       
+        <link rel="stylesheet" type="text/css" href="indexcss/contentmo.css" />
+        <link rel="stylesheet" type="text/css" href="indexcss/contentpc.css" />
+         <link rel="stylesheet" type="text/css" href="indexcss/navpcrechts.css" />
+         <link rel="stylesheet" type="text/css" href="indexcss/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/impressum.css" />
+         <link rel="stylesheet" type="text/css" href="css/social.css" />
+        <link rel="stylesheet" type="text/css" href="css/background.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            /*
+ * uilang v1.0.1
+ * http://uilang.com
+ */
+
+document.addEventListener("DOMContentLoaded", function() {
+  "use strict"
+
+  var codeElements = document.getElementsByTagName("code")
+  var i = codeElements.length
+  var delimiter = "clicking on"
+  var codeBlock
+  var codeBlockContent
+
+  while (i--) {
+    var code = codeElements[i]
+    var content = code.textContent.trim()
+    if (content.lastIndexOf(delimiter, 0) === 0) {
+      codeBlock = code
+      codeBlockContent = content
+      break
+    }
+  }
+
+  if (!codeBlock) return
+  codeBlock.parentNode.removeChild(codeBlock)
+
+  function InstructionParsing(instruction) {
+    var separator = instruction.charAt(0)
+    var instructionSplit = instruction.split(separator)
+
+    this.clickSelector = instructionSplit[1]
+    this.classBehavior = instructionSplit[2].trim().split(" ")[0]
+    this.classValue = instructionSplit[3]
+    this.targetSelector = instructionSplit[5]
+  }
+
+  function UIElement(clickSelector, classBehavior, classValue, targetSelector) {
+    this.clickSelector = clickSelector
+    this.classBehavior = classBehavior.charAt(classBehavior.length-1) == "s"
+                       ? classBehavior.substring(0, classBehavior.length-1)
+                       : classBehavior
+    this.classValue = classValue.charAt(0) == "."
+                    ? classValue.substring(1, classValue.length)
+                    : classValue
+    this.targetSelector = targetSelector
+    this.createEventListener()
+  }
+
+  UIElement.prototype.createEventListener = function() {
+    var self = this
+    var clicked = document.querySelectorAll(self.clickSelector)
+    var i = clicked.length
+
+    if (i < 1) {
+      throw new Error("There's no element matching your \"" + self.clickSelector + "\" CSS selector.")
+    }
+
+    while (i--) {
+      clicked.item(i).addEventListener("click", clickCallback)
+    }
+
+    function updateClass(el) {
+      el.classList[self.classBehavior](self.classValue)
+    }
+
+    function clickCallback(e) {
+      switch (self.targetSelector) {
+        case "target" :
+        case "this"   :
+        case "it"     :
+        case "itself" :
+        case undefined:
+          updateClass(e.target)
+          break
+        default:
+          var target = document.querySelectorAll(self.targetSelector)
+          var i = target.length
+          while (i--) {
+            updateClass(target.item(i))
+          }
+      }
+      if (e.target.nodeName.toLowerCase() == ".mo") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#home") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#jugend") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#termine") {
+        e.preventDefault()       
+      } 
+        if (e.target.nodeName.toLowerCase() == "#zeltlager") {
+        e.preventDefault()
+      }
+        if (e.target.nodeName.toLowerCase() == "#anmeldung") {
+        e.preventDefault()
+      }
+    }
+  }
+
+  codeBlockContent.split(delimiter).forEach(function(data) {
+    if (!data) return
+    var params = new InstructionParsing(data.trim())
+    new UIElement(
+      params.clickSelector,
+      params.classBehavior,
+      params.classValue,
+      params.targetSelector
+    )
+  })
+})
+          </script>
+
+   <script src="scripts/jquery/jquery-3.1.1.min.js"></script>
+          <script>
+    jQuery(document).ready(function($){
+        
+$("#buttons span").click(function() {
+    var id = $(this).attr("id");
+    $("#pages div").css("display", "none");
+    $("#pages div#" + id + "").css("display", "block");
+});
+ $("#pages div:not(#home)").css("display", "none");       
+});   
+        </script>
+        
+        
+        <script>
+       jQuery(document).ready(function(){
+    var eTop = $("#jugend").offset().top;
+    $(document).scrollTop(eTop);
+    var eHeight = $("#jugend").height();
+    var eBottom = eTop + eHeight - $(window).height();
+    $(document).on("scroll", function(e){
+        var windowScrollTop = $(window).scrollTop();
+        if(windowScrollTop < eTop){
+            console.log("not allowed");
+            $(document).scrollTop(eTop);
+        }
+        else if(windowScrollTop > eBottom){
+            $(document).scrollTop(eBottom);
+        }
+        else{
+            console.log("allowed");
+        }
+    });
+});
+    </script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+         </script>
+        
+        <script>
+    $hash = md5(time());
+$_SESSION['hash'] = $hash;
+printf('<input type="hidden" name="hash" value="%s" />', $hash);
+
+(...)
+
+if($_POST['hash'] == $_SESSION['hash']) {
+    // Eingabe ok, speichere in Datenbank
+    unset($_SESSION['hash']);
+} else {
+    // Doppelt abgesendet, nicht akzeptieren
+}
+        </script>
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <body>
+          
+          <div class="se-pre-con"></div>
+          
+          
+          
+ 
+          
+          
+          
+
+            
+       
+          
+          
+          <a class="mo" href=#>
+    
+              <span class="ham"></span>
+              <span class="ham"></span>
+              <span class="ham"></span>
+   
+          </a>
+          
+          
+
+          
+<nav> 
+    
+  
+      
+  <div id="buttons">      
+        <span id="home" class="home" onclick=""><p>HOME</p></span>
+    </br>
+        <span id="jugend" class="button" onclick=""><p>JUGEND</p></span>
+    </br>
+        <span id="termine" class="button" onclick=""><p>TERMINE</p></span>
+    </br>
+        <span id="zeltlager" class="button" onclick=""><p>ZELTLAGER</p></span>
+  </br>
+  <!--
+<a href="/anmeldung.html"><span id="anmeldung" class="button" onclick="" ><p style="padding-bottom:0;"> Zeltlager 2017</p><p class="info" style="font-size: 14pt; padding:0 5px;"> Info & Anmeldung</p></span></a>
+-->
+    </div> 
+    
+
+    <div class="social">
+     <a style="font-size:25px;" target="_blank" href="https://www.facebook.com/pfajukon/?ref=aymt_homepage_panel" class="fa fa-facebook"></a>
+          
+     <a style="font-size:25px;" target="_blank" href="https://www.youtube.com/channel/UCiKvt0r_LZ2KMzr94ZoJRuw" class="fa fa-youtube"></a>
+     
+     
+     
+  <!---   
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-android"></a>
+<a href="#" class="fa fa-dribbble"></a>
+<a href="#" class="fa fa-vimeo"></a>
+<a href="#" class="fa fa-tumblr"></a>
+<a href="#" class="fa fa-vine"></a>
+<a href="#" class="fa fa-foursquare"></a>
+<a href="#" class="fa fa-stumbleupon"></a>
+<a href="#" class="fa fa-flickr"></a>
+<a href="#" class="fa fa-yahoo"></a>
+<a href="#" class="fa fa-reddit"></a>
+<a href="#" class="fa fa-rss"></a>
+    --->
+            </div>
+    <div class="socialmo">
+     <a style="font-size:25px;" target="_blank" href="https://www.facebook.com/pfajukon/?ref=aymt_homepage_panel" class="fa fa-facebook"></a>
+          
+     <a style="font-size:25px;" target="_blank" href="https://www.youtube.com/channel/UCiKvt0r_LZ2KMzr94ZoJRuw" class="fa fa-youtube"></a>
+     
+     
+     
+  <!---   
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-android"></a>
+<a href="#" class="fa fa-dribbble"></a>
+<a href="#" class="fa fa-vimeo"></a>
+<a href="#" class="fa fa-tumblr"></a>
+<a href="#" class="fa fa-vine"></a>
+<a href="#" class="fa fa-foursquare"></a>
+<a href="#" class="fa fa-stumbleupon"></a>
+<a href="#" class="fa fa-flickr"></a>
+<a href="#" class="fa fa-yahoo"></a>
+<a href="#" class="fa fa-reddit"></a>
+<a href="#" class="fa fa-rss"></a>
+    --->
+            </div>
+
+
+
+                     <a href="impressum.html">
+                <p class="imphome">Impressum</p>
+</a>
+          </nav>
+
+
+
+<div class="rechts">
+    
+  
+      
+  <div>      
+        
+    </br>
+        <span class="button" onclick=""><p>Login</p></span>
+    </br>
+        <span class="button" onclick=""><p>Kontakt</p></span>
+    </br>
+        <span class="button" onclick=""><p>GALERIE</p></span>
+
+    </div> 
+    
+
+   
+
+
+
+
+          </div> 
+
+
+
+          
+         <div id="pages">
+               
+            <div id="home" class="mydivshow">
+                                 
+                     <div id="home"class="logo">
+                </div>
+                         
+               
+                  <!--         
+                    <a href="" target="_blank">
+                                          <div id="home"class="gal">
+                                               </div> 
+         </a>
+               -->            
+                 
+     
+               
+        </div>  
+       
+
+                  </div>   
+    
+            </div> 
+          
+          
+          
+
+          
+  
+     <div class="content">     
+          
+       <div id="pages">
+      
+           
+           
+           <div id="jugend" class="mydivhide">
+            
+            
+            
+                 <div id="jugend" class="mediaboxhome">
+							<img src="img/wer.jpg" alt="img04" width="100%" />
+							<h3>Wer sind wir?</h3>
+							<p>Die Pfarrjugend St. Konrad ist ein bunter Haufen engagierter Mädels und Jungs zwischen 15 und 23 Jahren. Die meisten von uns kommen aus dem schönen Strietwald, ein paar Teamer sind auch aus Johannesberg zu uns gestoßen. Neben unseren alljährlichen Jugendaktionen sind wir auch so alle gut befreundet und haben jedes Jahr eine Menge Spaß an unserem Planungswochenende. An diesem Wochenende planen wir nicht nur unsere Aktionen, sondern verbringen einfach Zeit miteinander, kochen und unternehmen die verschiedensten Dinge.</p>
+						</div>
+						<div id="jugend" class="mediaboxhome">
+							<img src="img/was.jpg" alt="img05" width="100%" />
+							<h3>Was machen wir?</h3>
+							<p>Das Highlight des Jahres ist für alle das Zeltlager. Zeltlager bedeutet für uns eine Woche voller Spaß, Abende am Lagerfeuer, Geländespiele im Wald und allerlei Workshops vom Basteln bis hin zum Bauen. Aber auch unter dem Jahr versuchen wir den Kindern einiges zu bieten. Ob Actionday, Filmabend oder die immer gut besuchte Kinderdisco, bei uns steht immer etwas an. Abgesehen von der Jugendarbeit ist die Pfarrjugend selbstverständlich auch bei anderen kirchlichen Aktionen dabei, zum Beispiel beim alljährlichen Glühweinverkauf in der Adventszeit oder dem Pommes- und Waffelstand am Pfarrfest.
+</p>
+						</div>
+						<div id="jugend" class="mediaboxhome">
+							<img src="img/wo.jpg" alt="img06"  width="100%"/>
+							<h3>Wo sind wir zuhause?</h3>
+							<p>Unsere Räumlichkeiten befinden sich im Pfarrheim der Gemeinde St. Konrad im Strietwald. Hier haben wir zwei Jugendräume zur Verfügung, in denen viele Aktionen stattfinden. Allerdings sind wir im Sommer größtenteils auf der großen Wiese vor dem Pfarrheim anzutreffen, da sich diese perfekt für viele Spiele eignet.
+</p>
+                            
+</br>   </br>   </br>   </br>   </br>   </br>   </br>   </br>   </br>    </br>  </br>  </br></br>  </br>  </br></br>  </br>  </br>
+        </div></br>
+        </div>
+           
+           
+           
+           
+           
+        <div id="termine" class="mydivhide">
+            
+            
+            
+          
+
+<div  id="termine"class="mediabox" style="opacity: 1;">
+							<img src="img/wein.jpg" alt="img04" />
+							<h3 class="termine">Glühweinaktion</h3>
+							<h3>17.12.2017</h3>
+							<p>Glühweinverkauf an der Kirche St. Konrad in Strietwald.</p>
+						</div>
+					
+
+
+						<div id="termine" class="mediabox" style="opacity: 0.2;">
+							<img src="img/klapper.jpg" alt="img06" />
+							<h3 class="termine">Klappern</h3>
+							<h3>14.04.2017</h3>
+							<p>Traditionelles Karwochen Klappern.</p>
+						</div>
+
+						<div id="termine" class="mediabox" style="opacity: 0.2;">
+							<img src="img/zz.png" alt="img06" />
+							<h3 class="termine">Zeltlager</h3>
+							<h3>04.06.2017 bis 10.06.2017</h3>
+							<p>Ferienlager der Pfarrjugend St. Konrad.</p>
+						</div>
+
+
+            	<div id="termine" class="mediabox" style="opacity: 0.2;" style="opacity: 0.2;">
+							<img src="img/wein.jpg" alt="img04"  />
+							<h3 class="termine">Glühweinaktion</h3>
+							<h3>18.12.2016</h3>
+							<p>Glühweinverkauf an der Kirche St. Konrad in Strietwald.</p>
+						</div>
+						<div  id="termine"class="mediabox" style="opacity: 0.2;">
+							<img src="img/stern.jpg" alt="img05" />
+							<h3 class="termine">Sternsinger</h3>
+							<h3>06.01.2017</h3>
+							<p>Spendensammeln in Strietwald für das Kinderhospiz. </p>
+						</div>
+
+
+						<div  id="termine"class="mediabox" style="opacity: 0.2;">
+							<img src="img/cba.jpg" alt="img06" />
+							<h3 class="termine">Christbaumaktion</h3>
+							<h3>14.01.2017</h3>
+							<p>Für eine kleine Spende entsorgen wir Ihre Weihnachtsbäume. </p>
+						</div>
+            
+            </br>   </br>   </br>   </br>   </br>   </br>   </br>   </br>   </br>    </br>  </br>  </br></br>  </br>  </br></br>  </br>  </br>
+            
+            
+          </div>
+
+ 
+           
+           
+        <div id="zeltlager" class="mydivhide">
+            
+            
+            <div id="zeltlager" class="mediaboxhome">
+							
+					<img src="img/zl.jpg" alt="img05" width="100%" />
+                <h3>Eine Woche Highlight für Kinder und Betreuer!</h3>
+							<p>Das Zeltlager ist die größte Aktion der Pfarrjugend St. Konrad und findet jedes Jahr in der ersten Pfingstferienwoche statt.
+                              </br>                                  
+                            Sonntags beginnend mit einem Kennenlernspiel werden die Betreuer den Kindern vorgestellt. Montags starten die "Lagerbauten", die Gruppen können ihre Zelte nach Belieben ausbauen.</br> Es wird gebastelt und gehämmert was das Zeug hält. Schuhschränke, Tische, Stühle und ganze Vorzelte. 
+                            </br>
+                            An den darauf folgenden Tagen wird weiter gewerkelt, gespielt und den Teilnehmern die Natur näher gebracht. 
+                            </br>Nachtgame, Powergame, Olympiade, Dorfrallye und Schwimmbadtag, um nur ein paar Aktivitäten zu nennen, füllen allerdings keinen ganzen Tag. 
+                            </br>
+                            Es gibt ausserdem Pflichtdienste, wie  den Holz-, Spül- oder Küchendienst. Diese Aufgaben erledigen die Kinder spielerisch über den Tag verteilt. Gekocht wird beim Zeltlager morgens, mittags und abends. Unsere Küche arbeitet immer mit frischen und hochwertigen Zutaten. 
+                            </br>
+                            Die einzelnen Games, die sogar einen halben Tag dauern können, werden an das aktuelle Thema angepasst und mit schauspielerischen Einlagen von unseren Betreuern eingeleitet. Wenn die Sonne langsam hinter dem Horizont verschwindet, wird das Feuer entfacht und die Gitarre ausgepackt. Es wird gesungen, gelacht und Kampfschreie werden gebrüllt, um mögliche Räuber zu verjagen.</p>
+                                </div>
+          
+           
+ <div id="zeltlager" class="mediaboxhome">
+							<img src="img/ort.jpg" alt="img05"  width="100%"/>
+							<h3>Zeltplatz</h3>
+
+                            <p>Der Ort an dem das Zeltlager stattfindet wechselt jedes Jahr, beschränkt sich aber auf den Odenwald oder Spessart und ist maximal 1 1/2 Stunden von Aschaffenburg entfernt. Sanitäre Anlagen sowie fließend Wasser sind immer vorhanden. Unsere Jugend fährt zwei Tage vor Beginn des Lagers auf den Zeltplatz, baut die Zelte auf und bereitet alles vor.</p>
+						</div>
+<div id="zeltlager" class="mediaboxhome">
+							<img src="img/bet.jpg" alt="img06" width="100%" />
+							<h3>Betreuer</h3>
+							<p>Es fahren jedes Jahr um die 25 Betreuer mit: als Lagerleitung, Küche oder Gruppenbetreuer und Helfer. Um die Sicherheit zu gewährleisten gibt es eine Nachtwache, einen Fahrdienst und eine kleine Erste-Hilfe Auffrischung. Es sind ausgebildetete Betreuer dabei, die auch in anderen Bereichen tätig sind und regelmäßig an Schulungen teilnehmen.</p>
+
+                        </div>
+<div id="zeltlager" class="mediaboxhome">
+							<img src="img/gpf.jpg" alt="img06" width="100%" />
+							<h3>Kinder</h3>
+							<p>Von 7 bis 14 Jahren sind Mädchen und Jungs vertreten. Sie kommen größtenteils aus Aschaffenburg und Umgebung, beispielsweise aus Strietwald oder Johannesberg. Sie werden nach Alter und Geschlecht in verschiedene Gruppen eingeteilt. Viele Aktivitäten finden in diesen Teams statt.</p>
+
+						</div>
+           
+           
+           </br>   </br>   </br>   </br>   </br>   </br>   </br>   </br>   </br>    </br>  </br>  </br></br>  </br>  </br></br>  </br>  </br>
+           
+           
+           
+           
+           
+           
+           </div>
+
+      
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>  <!-- pages -->   
+             
+          
+          
+          
+          
+
+        </div><!-- content -->
+        
+        
+  
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <code>
+                clicking on ".mo" toggles class "open" on ".mo"
+                clicking on "#buttons" toggles class "open" on ".mo"
+     
+            
+          
+            
+</code>
+
+
+
+ 
+    </body>
+
+</html>
+    
+    
+    
+    
+    
+    hallo ich bin ein test
+    
+    
+    

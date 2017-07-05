@@ -1,0 +1,189 @@
+ 
+
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="language" content="deutsch, de">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PfaJuKo</title>
+		<meta name="description" content="Offizielle Webseite der Pfarrjugend St. Konrad. Striewald in Aschaffenburg" />
+		<meta name="keywords" content="Pfarrjugend, St. Konrad, Strietwald, Aschaffenburg, CBA, Christbaumaktion, Zeltlager, Sternsinger, Klappern, Pfajuko, Anmeldung, Ehrenamt, St Konrad, St, sankt, Konrad, Jugend " />
+		<meta name="page-topic" content="Ehrenamt, Jugendarbeit">
+        <link rel="stylesheet" type="text/css" href="indexcss/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/action.css" />
+        <link rel="stylesheet" type="text/css" href="css/impressum.css" />
+        <link rel="stylesheet" type="text/css" href="css/fade.css" />
+        <link rel="stylesheet" type="text/css" href="css/modal.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
+        <link rel="stylesheet" type="text/css" href="css/social.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<script>
+function goback() {
+    history.go(-1);
+}
+</script>
+        
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+         </script>
+
+        
+  <script>      
+        $(window, document, undefined).ready(function() {
+  
+  
+  // Show overlay & Open modal
+  
+  $( ".login-modal-overlay" ).click(function() {
+    $(this).fadeOut(200);
+  });
+  $( ".openb" ).click(function() {
+    $(".login-modal-overlay").fadeIn(200);
+  });
+  $(".login-modal").click(function(event) {
+    event.stopPropagation();
+  });
+  
+  
+  // Input label
+
+  $('input').blur(function() {
+    var $this = $(this);
+    if ($this.val())
+      $this.addClass('used');
+    else
+      $this.removeClass('used');
+  });
+  
+  
+  // Animations
+
+  var $ripples = $('.ripples');
+
+  $ripples.on('click.Ripples', function(e) {
+
+    var $this = $(this);
+    var $offset = $this.parent().offset();
+    var $circle = $this.find('.ripplesCircle');
+
+    var x = e.pageX - $offset.left;
+    var y = e.pageY - $offset.top;
+
+    $circle.css({
+      top: y + 'px',
+      left: x + 'px'
+    });
+
+    $this.addClass('is-active');
+
+  });
+
+  $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
+  	$(this).removeClass('is-active');
+  });
+
+});
+      
+      </script>
+    </head>
+    <body>
+<div class="login-modal-overlay">
+  
+  <div class="login-modal">
+    <h1>Anmelden</h1>
+    <h2>Bitte gebe deine Zugangsdaten ein.</h2>
+    <form action="login.php">
+      <div class="group">
+        <input type="text"required name="id"></span><span class="bar"></span>
+        <label>Nutzer</label>
+      </div>
+      <div class="group">
+        <input type="password" name="pw" required></span><span class="bar"></span>
+        <label>Passwort</label>
+      </div>
+                      
+      <button type="submit" class="button buttonBlue">Login
+        <div class="ripples buttonRipples">
+          <span class="ripplesCircle"></span>
+        </div>
+    </button>
+  </form>
+</div>
+
+</div>
+<div class="se-pre-con"></div>
+
+<p>Kilian Wunderlich<br>
+Glattbacher Str. 41c<br>
+63741 Aschaffenburg<br>
+
+info@pfajuko.de<br><br>
+
+Inhaltlich Verantwortlicher gemäß §5 TMG, §55 RStV:<br> Kilian Wunderlich<br><br>
+
+Die Kirchengemeinde ist Körperschaft des Öffentlichen Rechts.
+    
+    </p>
+
+     <div class="soimp">
+     <a style="font-size:25px;" target="_blank" href="https://www.facebook.com/pfajukon/?ref=aymt_homepage_panel" class="fa fa-facebook"></a>
+          
+     <a style="font-size:25px;" target="_blank" href="https://www.youtube.com/channel/UCiKvt0r_LZ2KMzr94ZoJRuw" class="fa fa-youtube"></a>
+     
+     
+     
+  <!---   
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-android"></a>
+<a href="#" class="fa fa-dribbble"></a>
+<a href="#" class="fa fa-vimeo"></a>
+<a href="#" class="fa fa-tumblr"></a>
+<a href="#" class="fa fa-vine"></a>
+<a href="#" class="fa fa-foursquare"></a>
+<a href="#" class="fa fa-stumbleupon"></a>
+<a href="#" class="fa fa-flickr"></a>
+<a href="#" class="fa fa-yahoo"></a>
+<a href="#" class="fa fa-reddit"></a>
+<a href="#" class="fa fa-rss"></a>
+    --->
+         
+         
+         
+            </div>
+        <div class="initiative">
+<a href="https://www.initiative-s.de/?ref=pfajuko.de" title="pfajuko.de wird überprüft von der Initiative-S"><img src="https://www.initiative-s.de/de/seal.php?key=pfajuko.de" title="pfajuko.de wird überprüft von der Initiative-S" alt=" wird überprüft von der Initiative-S" /></a>
+            </div>
+
+ <div> <a href="javascript:history.back()">
+                <p class="impressum" style="text-decoration:none;">Zurück</p></a>
+    </div>
+
+<!--
+    <div class="logo" style="text-align:center;">
+     <button type="text" class="button buttonBlue openb">Sign In
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+    </div>
+
+-->
+         </br></br></br></br>
+
+    </body>
+</html>

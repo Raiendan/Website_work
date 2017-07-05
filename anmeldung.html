@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="language" content="deutsch, de">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PfaJuKo</title>
+		<meta name="description" content="Offizielle Webseite der Pfarrjugend St. Konrad. Striewald in Aschaffenburg" />
+		<meta name="keywords" content="Pfarrjugend, St. Konrad, Strietwald, Aschaffenburg, CBA, Christbaumaktion, Zeltlager, Sternsinger, Klappern, Pfajuko, Anmeldung, Ehrenamt" />
+		<meta name="page-topic" content="Ehrenamt, Jugendarbeit">
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/navmo.css" />
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/navpc.css" />
+        <link rel="stylesheet" type="text/css" href="indexcss/navmo.css" />
+        <link rel="stylesheet" type="text/css" href="css/mediabox.css" />
+        <link rel="stylesheet" type="text/css" href="css/fade.css" />
+        <link rel="stylesheet" type="text/css" href="css/impressum.css" />
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/contentmo.css" />
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/contentpc.css" />
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/form.css" />
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/button.css" />
+        <link rel="stylesheet" type="text/css" href="anmeldungcss/impressum.css" />
+        <link rel="stylesheet" type="text/css" href="css/social.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            /*
+ * uilang v1.0.1
+ * http://uilang.com
+ */
+
+document.addEventListener("DOMContentLoaded", function() {
+  "use strict"
+
+  var codeElements = document.getElementsByTagName("code")
+  var i = codeElements.length
+  var delimiter = "clicking on"
+  var codeBlock
+  var codeBlockContent
+
+  while (i--) {
+    var code = codeElements[i]
+    var content = code.textContent.trim()
+    if (content.lastIndexOf(delimiter, 0) === 0) {
+      codeBlock = code
+      codeBlockContent = content
+      break
+    }
+  }
+
+  if (!codeBlock) return
+  codeBlock.parentNode.removeChild(codeBlock)
+
+  function InstructionParsing(instruction) {
+    var separator = instruction.charAt(0)
+    var instructionSplit = instruction.split(separator)
+
+    this.clickSelector = instructionSplit[1]
+    this.classBehavior = instructionSplit[2].trim().split(" ")[0]
+    this.classValue = instructionSplit[3]
+    this.targetSelector = instructionSplit[5]
+  }
+
+  function UIElement(clickSelector, classBehavior, classValue, targetSelector) {
+    this.clickSelector = clickSelector
+    this.classBehavior = classBehavior.charAt(classBehavior.length-1) == "s"
+                       ? classBehavior.substring(0, classBehavior.length-1)
+                       : classBehavior
+    this.classValue = classValue.charAt(0) == "."
+                    ? classValue.substring(1, classValue.length)
+                    : classValue
+    this.targetSelector = targetSelector
+    this.createEventListener()
+  }
+
+  UIElement.prototype.createEventListener = function() {
+    var self = this
+    var clicked = document.querySelectorAll(self.clickSelector)
+    var i = clicked.length
+
+    if (i < 1) {
+      throw new Error("There's no element matching your \"" + self.clickSelector + "\" CSS selector.")
+    }
+
+    while (i--) {
+      clicked.item(i).addEventListener("click", clickCallback)
+    }
+
+    function updateClass(el) {
+      el.classList[self.classBehavior](self.classValue)
+    }
+
+    function clickCallback(e) {
+      switch (self.targetSelector) {
+        case "target" :
+        case "this"   :
+        case "it"     :
+        case "itself" :
+        case undefined:
+          updateClass(e.target)
+          break
+        default:
+          var target = document.querySelectorAll(self.targetSelector)
+          var i = target.length
+          while (i--) {
+            updateClass(target.item(i))
+          }
+      }
+      if (e.target.nodeName.toLowerCase() == ".mo") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#home") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#thema") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#zeltplatz") {
+        e.preventDefault()
+      } if (e.target.nodeName.toLowerCase() == "#download") {
+        e.preventDefault()
+      }
+        if (e.target.nodeName.toLowerCase() == "#anmeldung") {
+        e.preventDefault()
+      }
+    }
+  }
+
+  codeBlockContent.split(delimiter).forEach(function(data) {
+    if (!data) return
+    var params = new InstructionParsing(data.trim())
+    new UIElement(
+      params.clickSelector,
+      params.classBehavior,
+      params.classValue,
+      params.targetSelector
+    )
+  })
+})
+          </script>
+
+   <script src="scripts/jquery/jquery-3.1.1.min.js"></script>
+          <script>
+    jQuery(document).ready(function($){
+        
+$("#buttons span").click(function() {
+    var id = $(this).attr("id");
+    $("#pages div").css("display", "none");
+    $("#pages div#" + id + "").css("display", "block");
+});
+ $("#pages div:not(#home)").css("display", "none");       
+});   
+        </script>
+        
+        
+        <script>
+       jQuery(document).ready(function(){
+    var eTop = $("#jugend").offset().top;
+    $(document).scrollTop(eTop);
+    var eHeight = $("#jugend").height();
+    var eBottom = eTop + eHeight - $(window).height();
+    $(document).on("scroll", function(e){
+        var windowScrollTop = $(window).scrollTop();
+        if(windowScrollTop < eTop){
+            console.log("not allowed");
+            $(document).scrollTop(eTop);
+        }
+        else if(windowScrollTop > eBottom){
+            $(document).scrollTop(eBottom);
+        }
+        else{
+            console.log("allowed");
+        }
+    });
+});
+    </script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+         </script>
+        
+        
+         
+        
+        
+        
+    </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <body>
+           
+          <div class="se-pre-con"></div>
+          
+          
+          
+  
+          
+  
+          
+          
+    
+          
+          
+          <a class="mo" href=#>
+    
+              <span class="ham"></span>
+              <span class="ham"></span>
+              <span class="ham"></span>
+   
+          </a>
+          
+          
+
+          
+<nav> 
+    
+  
+      
+  <div id="buttons">      
+       <span id="home" class="home" onclick=""><p> HOME </p></span>
+    </br>
+        <span id="thema" class="button" onclick=""><p>THEMA</p></span>
+    </br>
+        <span id="zeltplatz" class="button" onclick=""><p>ZELTPLATZ</p></span>
+    </br>
+        <span id="download" class="button" onclick=""><p>DOWNLOAD</p></span>
+  </br>
+        <span id="anmeldung" class="button" onclick=""><p>ANMELDUNG</p></span>
+
+
+    </div> 
+  
+    <div class="social">
+     <a style="font-size:25px;" target="_blank" href="https://www.facebook.com/pfajukon/?ref=aymt_homepage_panel" class="fa fa-facebook"></a>
+          
+     <a style="font-size:25px;" target="_blank" href="https://www.youtube.com/channel/UCiKvt0r_LZ2KMzr94ZoJRuw" class="fa fa-youtube"></a>
+     
+     
+     
+  <!---   
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-android"></a>
+<a href="#" class="fa fa-dribbble"></a>
+<a href="#" class="fa fa-vimeo"></a>
+<a href="#" class="fa fa-tumblr"></a>
+<a href="#" class="fa fa-vine"></a>
+<a href="#" class="fa fa-foursquare"></a>
+<a href="#" class="fa fa-stumbleupon"></a>
+<a href="#" class="fa fa-flickr"></a>
+<a href="#" class="fa fa-yahoo"></a>
+<a href="#" class="fa fa-reddit"></a>
+<a href="#" class="fa fa-rss"></a>
+    --->
+            </div>
+    <div class="socialmo">
+     <a style="font-size:25px;" target="_blank" href="https://www.facebook.com/pfajukon/?ref=aymt_homepage_panel" class="fa fa-facebook"></a>
+          
+     <a style="font-size:25px;" target="_blank" href="https://www.youtube.com/channel/UCiKvt0r_LZ2KMzr94ZoJRuw" class="fa fa-youtube"></a>
+     
+     
+     
+  <!---   
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-android"></a>
+<a href="#" class="fa fa-dribbble"></a>
+<a href="#" class="fa fa-vimeo"></a>
+<a href="#" class="fa fa-tumblr"></a>
+<a href="#" class="fa fa-vine"></a>
+<a href="#" class="fa fa-foursquare"></a>
+<a href="#" class="fa fa-stumbleupon"></a>
+<a href="#" class="fa fa-flickr"></a>
+<a href="#" class="fa fa-yahoo"></a>
+<a href="#" class="fa fa-reddit"></a>
+<a href="#" class="fa fa-rss"></a>
+    --->
+            </div>
+
+
+
+                     <a href="impressum.html">
+                <p class="imphome">Impressum</p>
+</a>
+          </nav>
+    
+          
+
+          
+           <div id="pages">
+               
+            <div id="home" class="mydivshow">
+                                  <div id="home"class="wald">
+  <img class="wald" src="img/zwald.png" />
+  </div>      
+         
+                     <div id="home"class="logo">
+               
+                         
+                                   
+                             
+                             
+                
+                  
+            </div>  
+                 
+      
+                 
+        </div>  
+       
+
+
+
+                  </div>   
+    
+            
+           
+           
+           
+           
+           
+           
+          
+
+          
+
+          
+  
+     <div class="content">     
+          
+       <div id="pages">
+           
+           
+      
+           
+           
+           <div id="thema" class="mydivhide">
+            
+        
+            
+                          						<div id="thema"class="mediaboxhome">
+                                    <img src="img/butter.jpg" width="100%" />
+                                                    <img src="img/zwald.png" width="30%" style="margin-top:5px;"/>
+
+						<p style="margin-top:5px;">Ein Freund erzählte mir vom Zauberwald.<br /> Dort sei alles anders.<br /> Keine Sorgen weit und breit.<br />
+Träume würden wahr, nur wenn man an sie denke. <br />Leicht fühle man sich.<br /> Fliegen könne
+jeder. Enttäuschungen gebe es im Zauberwald keine. <br />Einzig
+Überraschungen. <br />Positive. Die einen jeden in das Paradies führten.<br />
+
+Und das war nur ein winziger Teil der Aufzählung, <br />die er
+verführerisch über seine Zunge fließen ließ, <br />als seien die Worte in Honig getaucht und
+würden gebacken köstlichen Duft verströmen.<br />
+Nun, wer kann da Nein sagen! <br />Ich konnte es nicht!<br />
+<br />
+<br />
+<br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+</div>
+             
+	</div>				
+
+           
+           
+        <div id="zeltplatz" class="mydivhide">
+            
+       
+            
+          <div id="zeltplatz" class="mediaboxhome" >
+                            
+                         
+                    
+                            
+                            
+							<img src="img/mar.jpg" alt="img04"  width="100%" />
+							<h3>Ort</h3>
+							<p>Inmitten des Geoparks Bergstraße-Odenwald befindet sich die Gemeinde Mossautal mit ihren fünf Ortsteilen Ober- und Unter-Mossau, Hiltersklingen, Güttersbach und Hüttenthal, die zum Verweilen einlädt. </p>
+						</div>
+						<div id="zeltplatz" class="mediaboxhome">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.5586960332766!2d8.964824916064751!3d49.60607097936788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797e3971c2f0593%3A0xd6a8480881683512!2sJugendzeltplatz+Meisengrund%2C+64743+Beerfelden!5e0!3m2!1sde!2sde!4v1480460804282" style="min-width:40%;" width="100%"  height="185" allowfullscreen></iframe>					
+                            
+                            
+                            <h3>Zeltplatz Meisengrund</h3>
+							<p>
+								Der Zeltplatz liegt direkt neben dem schönen Marbach-Stausee.</br>
+								Dieser Zeltplatz wurde in der Vergangenheit schon einmal von uns genutzt und wir freuen uns, dass wir  die Möglichkeit haben dies wieder zu tun.</br>
+								Der Platz bietet ausreichend Platz für sämtliche Aktivitäten, </br>hat Strom und eine wunderbare Umgebung. </br>Leider haben die sanitären Anlagen keine Warmwasseraufbereitung. </br>Jedoch findet das Lager 2017 im Juni statt, </br>weshalb wir darin kein Problem sehen.
+						</div>
+						<div id="zeltplatz" class="mediaboxhome">
+							<img src="img/stau.jpg" alt="img04" width="100%"  />
+							<h3>Marbach-Stausee</h3>
+							<p>
+
+                                Er wurde von 1978 bis 1982 vom Wasserverband Mümling, welcher der Betreiber der Stauanlage ist, 
+                                ursprünglich zum Hochwasserschutz erbaut, dient offiziell seit 1986 aber auch dem Erholungszweck.
+                                Hauptanlass zum Bau des Marbach-Stausees war der Hochwasserschutz der talabwärts liegenden Orte. 
+                                Die gesamte Stauanlage, für deren Errichtung insgesamt 31 Mio. DM nötig waren, wurde 1985 nach Erprobung eingeweiht. </p>
+                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+						</div>
+-->  
+		</div>
+
+
+
+
+
+
+
+
+        <div id="download" class="mydivhide">
+            
+            
+           <div id="download" style="margin-top: 5%;">
+							
+					<a href="files/Pfingstzeltlager_2017_Elternbrief.pdf" download>
+                <button width= "360px;" height="40px;" class="load-button" ><p>Elternbrief</p></button>
+    </a>		
+
+                                   
+
+							
+
+                <button width= "360px;" height="40px;" class="load-button" ><p>Wegbeschreibung</p></button>
+				
+
+                                  
+							
+<a href="files/ZLAnmeldung_2017_Bl%C3%A4ttchen.pdf" download>
+                <button width="360px;" height="40px;" class="load-button" ><p>Anmeldung Ausdruck</p></button>
+			</a>	
+
+                                    
+        </div>   
+           
+        
+           </div>
+
+     
+ <div id="anmeldung" class="mydivhide">
+             
+            
+
+							
+          <div id="anmeldung" class="mediaboxhome">
+    
+
+				
+          <h1 text-align="center" style="color: #000000">
+
+			ANMELDUNG Zeltlager 2017 
+
+
+				</h1>
+                        <form id="contact" action="action.php" method="post"  style="padding-top: 0px;">                      
+					<div id="anmeldung" class="left">
+						<input id="anmeldung" type="text" placeholder="Vorname" required="required" name="vorname"/>
+						<input id="anmeldung" type="text" placeholder="Nachname" required="required" name="nachname"/>
+						<input id="anmeldung" type="email" placeholder="E-Mail" required="required" name="email"/>
+						<input id="anmeldung" type="text" placeholder="Straße" required="required" name="strasse"/>
+						<input id="anmeldung" type="text" placeholder="Ort" required="required" name="ort"/>
+						<input id="anmeldung" type="number" placeholder="Telefon" required="required" name="telefon"/>
+						<textarea id="anmeldung" placeholder="Kommentar" name="kommentar"></textarea>
+					</div>
+					<div id="anmeldung" class="right">
+						<input id="anmeldung" type="text" placeholder="Kind Vorname" required="required" name="kv1"/>
+						<input id="anmeldung" type="text" placeholder="Kind Nachname" required="required" name="kn1"/>
+						<input id="anmeldung" type="date" placeholder="Alter TT.MM.JJJJ" required="required" name="ka1"/>
+
+						<input id="anmeldung" type="text" placeholder="Kind Vorname" name="kv2"/>
+						<input id="anmeldung" type="text" placeholder="Kind Nachname" name="kn2"/>
+						<input id="anmeldung" type="date" placeholder="Alter TT.MM.JJJJ" name="ka2"/>
+
+						<input id="anmeldung" type="text" placeholder="Kind Vorname" name="kv3"/>
+						<input id="anmeldung" type="text" placeholder="Kind Nachname" name="kn3"/>
+						<input id="anmeldung" type="date" placeholder="Alter TT.MM.JJJJ" name="ka3"/>
+
+
+
+					</div>
+					<div id="anmeldung" class="send-button">
+						<button class="send-button" id="anmeldung" type="submit" value="Absenden">Anmelden*</button>
+					</div>
+              </form>
+                  <h1 text-align="center" style="color: #000000">
+
+
+
+
+
+				</h1>
+<p>*Die Anmeldung ist erst gültig sobald eine Anzahlung von 30€ auf unserem Konto eingangen ist. </br>Bei eventueller Absage oder Nichtteilnahme sehen wir uns durch im Voraus kalkulierte Einkäufe gezwungen,</br>  die 30€ Anzahlung einzubehalten. </br>Falls es Ihnen aus finanziellen Gründen nicht möglich ist diesen Preis zu zahlen ist das noch lange kein Grund Ihrem Kind das Zeltlager zu streichen.
+Sprechen Sie uns einfach darauf an und wir finden eine Lösung :)
+    </p>
+				
+    </div> 
+
+<div id="anmeldung" class="mediaboxhome">
+                                      <img class="inf" src="img/inf.png" />
+    </div>
+    <div id="anmeldung" class="mediaboxhome">
+<img class="preis" src="img/preis.png"  />
+        </div>
+        <div id="anmeldung" class="mediaboxhome">
+<img class="cal" src="img/cal.png"  />
+
+  
+          </div>
+
+                  </div>
+		
+    
+           
+           
+   
+
+
+
+
+
+
+    </div>  <!-- pages -->   
+             
+          
+          
+          
+          
+
+        </div><!-- content -->
+        </div><!-- content -->
+        
+        
+  
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <code>
+                clicking on ".mo" toggles class "open" on ".mo"
+                clicking on "#buttons" toggles class "open" on ".mo"
+           
+            
+</code>
+    </body>
+    
+</html>
+    
+ 
+    
+    
+    
+    
+    
+    

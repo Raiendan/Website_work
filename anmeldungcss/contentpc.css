@@ -1,0 +1,74 @@
+@media only screen and (min-width: 1280px) {
+             .socialmo {
+    display: none;
+    
+}
+    
+    
+    
+    @media only screen and (max-width: 449px) {
+@media only screen and (max-height: 450px) {
+    
+    
+        
+         .social {
+    display: none;
+    
+}
+  }  
+}
+@media only screen and (min-width: 450px) {
+@media only screen and (min-height: 451px) {
+    
+   .social {
+    z-index: 999999;
+    position: fixed;
+
+    left: 54px;
+transform: translateX(-50%);
+   text-align: center;
+    
+}
+ }   
+}
+        
+   
+    
+    
+    
+    
+    
+    
+    
+.mydivhide {
+        top:0;
+        position:fixed;
+    text-align: center;
+          background-image: linear-gradient( 
+      360deg,
+   hsla(286, 100%, 50%, 0.1) 1%,
+   hsl(0, 0%, 100%) 50%
+);
+
+        width: auto;
+        max-width: 1450px;
+       
+        height: 100%;
+    z-index: 99;
+        left: 20%;
+        right: 23%;
+    
+    overflow: auto;
+     overflow-x: hidden;
+    }
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+}

@@ -1,0 +1,35 @@
+.load-button {
+    
+
+ 
+    width: 60%;
+	margin-top: 20px;
+    padding-bottom: 0px;
+
+  
+    background-color: #f5fff8;
+    border: 1px solid #a0089a;
+    transition: all 2s ease 0s;
+   
+ 
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+.load-button:hover {
+  background: #14e6b2
+}
+
+
+.load-button p {
+ text-align: center;
+    padding: inherit;
+   margin: 0.5em;
+    color: #000000;
+    font-family: "Franklin Gothic Medium";
+    font-size: 16pt;
+}
+
+

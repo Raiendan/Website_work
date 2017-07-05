@@ -1,0 +1,104 @@
+
+
+@media only screen and (min-width: 1920px) {
+body {
+ 
+    background-image:url(/img/nat2k.jpg);
+  background-size:cover;
+    background-repeat: no-repeat;
+    overflow:auto;
+     font-family: "OpenSans-Regular.ttf";
+    
+    margin: 0;
+    height: 100%;
+   
+
+  }
+}
+    
+
+@media only screen and (max-width:1919px) {
+@media only screen and (min-width: 1300px) {
+body {
+ 
+    background-image:url(/img/natfullhd.jpg);
+  background-size:cover;
+    background-repeat: no-repeat;
+    overflow:auto;
+     font-family: "OpenSans-Regular.ttf";
+    
+    margin: 0;
+    height: 100%;
+   
+
+  }
+}
+    }
+
+@media only screen and (max-width:1299px) {
+@media only screen and (min-width: 700px) {
+body {
+ 
+    background-image:url(/img/nathd.jpg);
+  background-size:cover;
+    background-repeat: no-repeat;
+    overflow:auto;
+     font-family: "OpenSans-Regular.ttf";
+    
+    margin: 0;
+    height: 100%;
+   
+
+  }
+}
+    }
+
+
+@media only screen and (max-width:699px) {
+@media only screen and (min-width:1px) {
+body {
+ 
+    background-image:url(/img/natmo.jpg);
+  background-size:cover;
+    background-repeat: no-repeat;
+    overflow:auto;
+     font-family: "OpenSans-Regular.ttf";
+    
+    margin: 0;
+    height: 100%;
+   
+
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

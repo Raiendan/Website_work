@@ -1,0 +1,126 @@
+@media only screen and (min-width: 1280px) {
+    
+
+    
+nav span {
+        
+        display: inline-block;
+        position: relative;
+    padding-top: 5px;
+ 
+    
+         cursor:pointer;
+   
+    }
+    
+   
+    nav {
+        
+   
+        position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+    }
+
+
+
+
+
+
+    
+
+.button {
+    
+  display: inline-block;
+    position: relative;
+    margin: auto;
+  
+  left: 0;
+    cursor:pointer;
+    
+       
+   
+    }
+    
+    
+    
+    .home {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+  
+ 
+     left: 0;
+ 
+cursor:pointer;
+       
+
+}
+    
+     .home:hover {
+ opacity: 0.4;
+
+}
+    
+    .button:hover {
+   opacity: 0.4;
+
+}
+
+
+
+ nav p {
+     
+     text-align: center;
+      color: antiquewhite;
+    font-size: 30px; 
+     padding: 10px;
+     margin: 0;
+}
+    
+    
+     .info {
+        
+        text-align: left;
+    }
+    
+    
+ 
+ .impressum:hover {
+    
+  
+       border-bottom: 2px solid rgba(255, 255, 255, 0);
+     border-radius:0px;
+} 
+
+.imphome{
+
+
+font-size: 10pt;
+    margin-top: 40px;
+    left: 10px;
+    width: 10%;
+
+
+}
+
+
+.imphome a{
+
+
+text-decoration: none;
+
+
+}
+
+
+.imphome:hover{
+    
+    
+    
+    opacity: 0.3;
+}
+
+  }
+
+
