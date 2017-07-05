@@ -1,7 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <link rel="stylesheet" type="text/css" href="anmeldungcss/main.css" />
-<link rel="stylesheet" type="text/css" href="css/action.css" />
-<link rel="stylesheet" type="text/css" href="css/impressum.css" />
+ <link rel="stylesheet" type="text/css" href="css/main.css" />
+ <link rel="stylesheet" type="text/css" href="css/imp_action_modal.css" />
 <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
 
 <?php
@@ -14,9 +13,12 @@ include 'dbanmeldung.php';
     }
     else
     {
-    echo '<p>Wir freuen uns, dass Sie Ihr Kind für das Zeltlager 2017 angemeldet habe. </br></br> Sie erhalten eine automatische Bestätigunsmail mit Ihren angegebenen Daten und unseren Kontodaten. </br></br>Bei fragen können Sie gerne auf diese Email antworten.</br></br>
+    echo '<div class="action"><p>Wir freuen uns, dass Sie Ihr Kind für das Zeltlager 2017 angemeldet habe. </br></br> Sie erhalten eine automatische Bestätigunsmail mit Ihren angegebenen Daten und unseren Kontodaten. </br></br>Bei fragen können Sie gerne auf diese Email antworten.</br></br>
     
-    VIELEN DANK :)</p> <div id="home"class="logo"> <a href="anmeldung.html">
+    VIELEN DANK :)</p>
+    </div>
+    
+    <div id="home"class="logo"> <a href="anmeldung.html">
                 <p class="impressum" style="text-decoration:none;">Zurück</p></div>  ';
     }
 

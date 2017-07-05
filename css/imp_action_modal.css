@@ -1,4 +1,102 @@
 
+/* ----- !! IMPRESSUM !! ----- *//* ----- !! IMPRESSUM !! ----- */
+/* ----- !! IMPRESSUM !! ----- *//* ----- !! IMPRESSUM !! ----- */
+/* ----- !! IMPRESSUM !! ----- *//* ----- !! IMPRESSUM !! ----- */
+
+
+.imptext {
+    
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    
+    
+}
+
+
+
+.impressum {
+    
+    
+   margin:0 auto;
+    
+    text-align: center;   
+         
+    width: 200px;
+  padding-top: 20px;
+    color: white;
+    font-size: 16pt;
+          
+    transition:1s; 
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius:10px;
+}
+    
+.impressum:hover {
+    
+  
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    border-radius:0px;
+} 
+   
+a:-webkit-any-link {
+   
+    text-decoration: none;
+}
+
+ 
+
+.initiative{
+    padding-top:40px; 
+    margin: auto;
+  
+    left: 0;
+    right: 0;
+    top:20px;
+    width:10%;
+   
+    min-width: 200px;
+   
+}
+
+.initiative img {
+   text-align: center;
+    
+    width:100%;
+    min-width: 200px;
+     margin: 0 auto;
+    
+    }
+  
+
+
+
+
+/* ----- !! ACTION.PHP !! ----- *//* ----- !! ACTION.PHP !! ----- */
+/* ----- !! ACTION.PHP !! ----- *//* ----- !! ACTION.PHP !! ----- */
+/* ----- !! ACTION.PHP !! ----- *//* ----- !! ACTION.PHP !! ----- */
+
+.action p {
+    text-align: center;
+  padding-top:1%; 
+   margin: auto;
+  vertical-align: top;
+    left: 0;
+    right: 0;
+    top:20px;
+    width:15%;
+    min-width: 300px;
+    font-size: 16pt;
+}
+
+
+/* ----- !! SIGN IN MODAL !! ----- *//* ----- !! SIGN IN MODAL !! ----- */
+/* ----- !! SIGN IN MODAL !! ----- *//* ----- !! SIGN IN MODAL !! ----- */
+/* ----- !! SIGN IN MODAL !! ----- *//* ----- !! SIGN IN MODAL !! ----- */
+
+.auskommentierenWTF {
+display: 
+
 /* open modal */
 
 .openb {
@@ -251,3 +349,8 @@
     opacity: 0;
   }
 }
+
+;}/*Klammer auskommentieren*/
+
+
+
