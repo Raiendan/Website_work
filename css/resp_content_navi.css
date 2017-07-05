@@ -25,6 +25,7 @@
       360deg,
    hsla(0, 0%, 100%, 0) 1%,
    hsl(0, 0%, 100%) 50%
+              
 );
 
     
@@ -35,34 +36,12 @@
         width: 100%;
     left:0;
     right: 0;
-    overflow:auto;
+    
     overflow-x: hidden;
     }
 
 
-    .mydivhide #anmeldung{
-        top:0;
-        position:fixed;
-    text-align: center;
-          background-image: linear-gradient( 
-      360deg,
-   hsla(152, 100%, 49%, 0.13) 1%,
-   hsl(0, 0%, 100%) 50%
-);
-
     
-        max-width: 1450px;
-       
-        height: 100%;
-    z-index: 99;
-        width: 100%;
-    left:0;
-    right: 0;
-    overflow:auto;
-    overflow-x: hidden
-        
-    
-    }
 
 
 
