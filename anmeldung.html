@@ -21,168 +21,6 @@
         
         <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script>
-            /*
- * uilang v1.0.1
- * http://uilang.com
- */
-
-document.addEventListener("DOMContentLoaded", function() {
-  "use strict"
-
-  var codeElements = document.getElementsByTagName("code")
-  var i = codeElements.length
-  var delimiter = "clicking on"
-  var codeBlock
-  var codeBlockContent
-
-  while (i--) {
-    var code = codeElements[i]
-    var content = code.textContent.trim()
-    if (content.lastIndexOf(delimiter, 0) === 0) {
-      codeBlock = code
-      codeBlockContent = content
-      break
-    }
-  }
-
-  if (!codeBlock) return
-  codeBlock.parentNode.removeChild(codeBlock)
-
-  function InstructionParsing(instruction) {
-    var separator = instruction.charAt(0)
-    var instructionSplit = instruction.split(separator)
-
-    this.clickSelector = instructionSplit[1]
-    this.classBehavior = instructionSplit[2].trim().split(" ")[0]
-    this.classValue = instructionSplit[3]
-    this.targetSelector = instructionSplit[5]
-  }
-
-  function UIElement(clickSelector, classBehavior, classValue, targetSelector) {
-    this.clickSelector = clickSelector
-    this.classBehavior = classBehavior.charAt(classBehavior.length-1) == "s"
-                       ? classBehavior.substring(0, classBehavior.length-1)
-                       : classBehavior
-    this.classValue = classValue.charAt(0) == "."
-                    ? classValue.substring(1, classValue.length)
-                    : classValue
-    this.targetSelector = targetSelector
-    this.createEventListener()
-  }
-
-  UIElement.prototype.createEventListener = function() {
-    var self = this
-    var clicked = document.querySelectorAll(self.clickSelector)
-    var i = clicked.length
-
-    if (i < 1) {
-      throw new Error("There's no element matching your \"" + self.clickSelector + "\" CSS selector.")
-    }
-
-    while (i--) {
-      clicked.item(i).addEventListener("click", clickCallback)
-    }
-
-    function updateClass(el) {
-      el.classList[self.classBehavior](self.classValue)
-    }
-
-    function clickCallback(e) {
-      switch (self.targetSelector) {
-        case "target" :
-        case "this"   :
-        case "it"     :
-        case "itself" :
-        case undefined:
-          updateClass(e.target)
-          break
-        default:
-          var target = document.querySelectorAll(self.targetSelector)
-          var i = target.length
-          while (i--) {
-            updateClass(target.item(i))
-          }
-      }
-      if (e.target.nodeName.toLowerCase() == ".mo") {
-        e.preventDefault()
-      }
-         if (e.target.nodeName.toLowerCase() == "#home") {
-        e.preventDefault()
-      }
-         if (e.target.nodeName.toLowerCase() == "#thema") {
-        e.preventDefault()
-      }
-         if (e.target.nodeName.toLowerCase() == "#zeltplatz") {
-        e.preventDefault()
-      } if (e.target.nodeName.toLowerCase() == "#download") {
-        e.preventDefault()
-      }
-        if (e.target.nodeName.toLowerCase() == "#anmeldung") {
-        e.preventDefault()
-      }
-    }
-  }
-
-  codeBlockContent.split(delimiter).forEach(function(data) {
-    if (!data) return
-    var params = new InstructionParsing(data.trim())
-    new UIElement(
-      params.clickSelector,
-      params.classBehavior,
-      params.classValue,
-      params.targetSelector
-    )
-  })
-})
-          </script>
-
-   <script src="scripts/jquery/jquery-3.1.1.min.js"></script>
-          <script>
-    jQuery(document).ready(function($){
-        
-$("#buttons span").click(function() {
-    var id = $(this).attr("id");
-    $("#pages div").css("display", "none");
-    $("#pages div#" + id + "").css("display", "block");
-});
- $("#pages div:not(#home)").css("display", "none");       
-});   
-        </script>
-        
-        
-        <script>
-       jQuery(document).ready(function(){
-    var eTop = $("#jugend").offset().top;
-    $(document).scrollTop(eTop);
-    var eHeight = $("#jugend").height();
-    var eBottom = eTop + eHeight - $(window).height();
-    $(document).on("scroll", function(e){
-        var windowScrollTop = $(window).scrollTop();
-        if(windowScrollTop < eTop){
-            console.log("not allowed");
-            $(document).scrollTop(eTop);
-        }
-        else if(windowScrollTop > eBottom){
-            $(document).scrollTop(eBottom);
-        }
-        else{
-            console.log("allowed");
-        }
-    });
-});
-    </script>
-        
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-<script>
-//paste this code under the head tag or in a separate js file.
-	// Wait for window load
-	$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;
-	});
-         </script>
         
         
          
@@ -523,20 +361,6 @@ Sprechen Sie uns einfach darauf an und wir finden eine Lösung :)
 
 		
                   </div>
-		
-      
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -551,85 +375,178 @@ Sprechen Sie uns einfach darauf an und wir finden eine Lösung :)
         </div><!-- content -->
         
         
-  
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+ 
           
           
         <code>
                 clicking on ".mo" toggles class "open" on ".mo"
-                clicking on "#buttons" toggles class "open" on ".mo"
-     
-            
-          
-            
-</code>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    </body>
+                clicking on "#buttons" toggles class "open" on ".mo"        
+        </code>
    
+    </body>
+   <script>
+            /*
+ * uilang v1.0.1
+ * http://uilang.com
+ */
+
+document.addEventListener("DOMContentLoaded", function() {
+  "use strict"
+
+  var codeElements = document.getElementsByTagName("code")
+  var i = codeElements.length
+  var delimiter = "clicking on"
+  var codeBlock
+  var codeBlockContent
+
+  while (i--) {
+    var code = codeElements[i]
+    var content = code.textContent.trim()
+    if (content.lastIndexOf(delimiter, 0) === 0) {
+      codeBlock = code
+      codeBlockContent = content
+      break
+    }
+  }
+
+  if (!codeBlock) return
+  codeBlock.parentNode.removeChild(codeBlock)
+
+  function InstructionParsing(instruction) {
+    var separator = instruction.charAt(0)
+    var instructionSplit = instruction.split(separator)
+
+    this.clickSelector = instructionSplit[1]
+    this.classBehavior = instructionSplit[2].trim().split(" ")[0]
+    this.classValue = instructionSplit[3]
+    this.targetSelector = instructionSplit[5]
+  }
+
+  function UIElement(clickSelector, classBehavior, classValue, targetSelector) {
+    this.clickSelector = clickSelector
+    this.classBehavior = classBehavior.charAt(classBehavior.length-1) == "s"
+                       ? classBehavior.substring(0, classBehavior.length-1)
+                       : classBehavior
+    this.classValue = classValue.charAt(0) == "."
+                    ? classValue.substring(1, classValue.length)
+                    : classValue
+    this.targetSelector = targetSelector
+    this.createEventListener()
+  }
+
+  UIElement.prototype.createEventListener = function() {
+    var self = this
+    var clicked = document.querySelectorAll(self.clickSelector)
+    var i = clicked.length
+
+    if (i < 1) {
+      throw new Error("There's no element matching your \"" + self.clickSelector + "\" CSS selector.")
+    }
+
+    while (i--) {
+      clicked.item(i).addEventListener("click", clickCallback)
+    }
+
+    function updateClass(el) {
+      el.classList[self.classBehavior](self.classValue)
+    }
+
+    function clickCallback(e) {
+      switch (self.targetSelector) {
+        case "target" :
+        case "this"   :
+        case "it"     :
+        case "itself" :
+        case undefined:
+          updateClass(e.target)
+          break
+        default:
+          var target = document.querySelectorAll(self.targetSelector)
+          var i = target.length
+          while (i--) {
+            updateClass(target.item(i))
+          }
+      }
+      if (e.target.nodeName.toLowerCase() == ".mo") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#home") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#thema") {
+        e.preventDefault()
+      }
+         if (e.target.nodeName.toLowerCase() == "#zeltplatz") {
+        e.preventDefault()
+      } if (e.target.nodeName.toLowerCase() == "#download") {
+        e.preventDefault()
+      }
+        if (e.target.nodeName.toLowerCase() == "#anmeldung") {
+        e.preventDefault()
+      }
+    }
+  }
+
+  codeBlockContent.split(delimiter).forEach(function(data) {
+    if (!data) return
+    var params = new InstructionParsing(data.trim())
+    new UIElement(
+      params.clickSelector,
+      params.classBehavior,
+      params.classValue,
+      params.targetSelector
+    )
+  })
+})
+          </script>
+
+   <script src="scripts/jquery/jquery-3.1.1.min.js"></script>
+          <script>
+    jQuery(document).ready(function($){
+        
+$("#buttons span").click(function() {
+    var id = $(this).attr("id");
+    $("#pages div").css("display", "none");
+    $("#pages div#" + id + "").css("display", "block");
+});
+ $("#pages div:not(#home)").css("display", "none");       
+});   
+        </script>
+        
+        
+        <script>
+       jQuery(document).ready(function(){
+    var eTop = $("#jugend").offset().top;
+    $(document).scrollTop(eTop);
+    var eHeight = $("#jugend").height();
+    var eBottom = eTop + eHeight - $(window).height();
+    $(document).on("scroll", function(e){
+        var windowScrollTop = $(window).scrollTop();
+        if(windowScrollTop < eTop){
+            console.log("not allowed");
+            $(document).scrollTop(eTop);
+        }
+        else if(windowScrollTop > eBottom){
+            $(document).scrollTop(eBottom);
+        }
+        else{
+            console.log("allowed");
+        }
+    });
+});
+    </script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+         </script>
+        
 </html>
     
  

@@ -119,10 +119,6 @@ nav span {
 }
 
 
-
-
-
-
 nav {
     position: fixed;
     width: 100%;
@@ -140,9 +136,7 @@ nav {
           transform: translateX(-100%);
   -webkit-transition: 1s;
   transition: 1s;
-   
-   
- 
+
 }
     
     .imphome{
@@ -212,14 +206,10 @@ code {
     cursor: pointer;
     top: 0px;
     width:100%;
-
- 
-   
-   transition: 0.4s;
+    transition: 0.4s;
     }
     
-    
-    
+
     .home {
         
 
@@ -273,8 +263,6 @@ code {
   }  
 
 
-
-    
 /* ----- !! CONTENT PC !! ----- *//* ----- !! CONTENT PC !! ----- */
 /* ----- !! CONTENT PC !! ----- *//* ----- !! CONTENT PC !! ----- */
 /* ----- !! CONTENT PC !! ----- *//* ----- !! CONTENT PC !! ----- */
@@ -345,8 +333,6 @@ code {
 }
 
 
-
-
 @media only screen and (min-width: 1280px) {
     
 .imphome{
@@ -356,30 +342,22 @@ code {
     margin-top: 50px;
     left: 2px;
     width: 10%;
-
-
 }
 
 
 .imphome a{
 
-
 text-decoration: none;
-
 
 }
 
 
 .imphome:hover{
-    
-    
-    
     opacity: 0.3;
 }
 
     
-nav span {
-        
+nav span {     
     display: inline-block;
     position: relative;
     padding-top: 5px;
@@ -387,21 +365,11 @@ nav span {
    
     }
     
-   
-    nav {
-        
-   
+  nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     }
-
-
-
-
-
-
-    
 
 .button {
     
@@ -411,11 +379,7 @@ nav span {
     left: 0;
     cursor:pointer;
     
-       
-   
     }
-    
-    
     
     .home {
     display: inline-block;
@@ -423,21 +387,15 @@ nav span {
     margin: auto;
     left: 0;
     cursor:pointer;
-       
-
 }
     
      .home:hover {
     opacity: 0.4;
-
 }
     
     .button:hover {
    opacity: 0.4;
-
 }
-
-
 
  nav p {
      
@@ -448,21 +406,15 @@ nav span {
     margin: 0;
 }
     
-    
-     .info {
-        
+       .info {  
     text-align: left;
     }
-    
-    
-
   }
 
 
 /* -- Navi PC rechts --*/
-@media only screen and (min-width: 1280px) {
-    
 
+@media only screen and (min-width: 1280px) {
     
 .rechts span {
         
@@ -483,22 +435,18 @@ nav span {
     transform: translateY(-50%);
     }
 
-
 .rechts .button {
     
     display: inline-block;
     position: relative;
     margin: auto;
     right: 0px;
-    cursor:pointer;
-      
+    cursor:pointer;     
     }
  
    .rechts .button:hover {
    opacity: 0.4;
-
 }
-
 
  .rechts p {
     float: left;
@@ -511,7 +459,6 @@ nav span {
 }
   }
 
-
 /* ----- !! MEDIABOX !! ----- *//* ----- !! MEDIABOX !! ----- */
 /* ----- !! MEDIABOX !! ----- *//* ----- !! MEDIABOX !! ----- */
 /* ----- !! MEDIABOX !! ----- *//* ----- !! MEDIABOX !! ----- */
@@ -520,18 +467,14 @@ nav span {
 /* original */
 .mediaboxhome {
   margin: 0 auto;
-	width: 100%;
-
-	
+	width: 100%;	
 }
 
 
 #download .mediaboxhome {
-    height: 43px;
-    
-
-    
+    height: 43px;   
 }
+
 .mediaboxhome p {
     
     margin-top: 20px;
@@ -678,7 +621,3 @@ mediabox h3 {
         margin-right: 5%;
 	}
 }
-
-
-
-
