@@ -3,8 +3,7 @@
 /* ----- !! IMPRESSUM !! ----- *//* ----- !! IMPRESSUM !! ----- */
 /* ----- !! IMPRESSUM !! ----- *//* ----- !! IMPRESSUM !! ----- */
 
-
-.imptext {
+.backtext {
     
     text-align: center;
     font-size: 16pt;
@@ -15,7 +14,7 @@
 
 
 
-.impressum {
+.back {
     
     
    margin:0 auto;
@@ -32,12 +31,13 @@
     border-radius:10px;
 }
     
-.impressum:hover {
+.back:hover {
     
   
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     border-radius:0px;
 } 
+
    
 a:-webkit-any-link {
    

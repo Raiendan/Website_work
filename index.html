@@ -14,7 +14,7 @@
         
         
         <link rel="stylesheet" type="text/css" href="css/fade.css" />  
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/home_style_social.css" />
         <link rel="stylesheet" type="text/css" href="css/resp_content_navi.css" />
  
         <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon-konrad3.ico">
@@ -152,27 +152,7 @@ $("#buttons span").click(function() {
         </script>
         
         
-        <script>
-       jQuery(document).ready(function(){
-    var eTop = $("#jugend").offset().top;
-    $(document).scrollTop(eTop);
-    var eHeight = $("#jugend").height();
-    var eBottom = eTop + eHeight - $(window).height();
-    $(document).on("scroll", function(e){
-        var windowScrollTop = $(window).scrollTop();
-        if(windowScrollTop < eTop){
-            console.log("not allowed");
-            $(document).scrollTop(eTop);
-        }
-        else if(windowScrollTop > eBottom){
-            $(document).scrollTop(eBottom);
-        }
-        else{
-            console.log("allowed");
-        }
-    });
-});
-    </script>
+     
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
@@ -184,21 +164,6 @@ $("#buttons span").click(function() {
 		$(".se-pre-con").fadeOut("slow");;
 	});
          </script>
-        
-        <script>
-    $hash = md5(time());
-$_SESSION['hash'] = $hash;
-printf('<input type="hidden" name="hash" value="%s" />', $hash);
-
-(...)
-
-if($_POST['hash'] == $_SESSION['hash']) {
-    // Eingabe ok, speichere in Datenbank
-    unset($_SESSION['hash']);
-} else {
-    // Doppelt abgesendet, nicht akzeptieren
-}
-        </script>
     </head>
     
     
@@ -248,9 +213,9 @@ if($_POST['hash'] == $_SESSION['hash']) {
     </br>
         <span id="zeltlager" class="button" onclick=""><p>ZELTLAGER</p></span>
   </br>
-  <!--
-<a href="/anmeldung.html"><span id="anmeldung" class="button" onclick="" ><p style="padding-bottom:0;"> Zeltlager 2017</p><p class="info" style="font-size: 14pt; padding:0 5px;"> Info & Anmeldung</p></span></a>
--->
+ 
+<a href="/anmeldung.html"><span id="anmeldung" class="button" onclick="" ><p style="padding-bottom:0;"> Zeltlager 2018</p><p class="info" style="font-size: 14pt; padding:0 12px;"> Info & Anmeldung</p></span></a>
+
     </div> 
     
 

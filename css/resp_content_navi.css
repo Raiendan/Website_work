@@ -5,45 +5,33 @@
 
 .mydivshow {
 
-      position: absolute;
-  top: 5%;
-  transform: translateY(-50%);
-  
-  left: 50%;
-  transform: translateX(-50%);
-   
-    
+    position: absolute;
+    top: 5%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);  
     }
 
 
 .mydivhide {
-        top:0;
-        position:fixed;
+    top:0;
+    position:fixed;
     text-align: center;
-     font-family: "OpenSans-Regular.ttf";
-          background-image: linear-gradient( 
-      360deg,
-   hsla(0, 0%, 100%, 0) 1%,
-   hsl(0, 0%, 100%) 50%
-              
+    font-family: "OpenSans-Regular.ttf";
+    background-image: linear-gradient( 
+                                        360deg,
+                                        hsla(0, 0%, 100%, 0) 1%,
+                                        hsl(0, 0%, 100%) 50%
 );
 
-    
-        max-width: 1450px;
-       
-        height: 100%;
+    max-width: 1800px;
+    height: 100%;
     z-index: 99;
-        width: 100%;
+    width: 100%;
     left:0;
     right: 0;
-    
     overflow-x: hidden;
     }
-
-
-    
-
-
 
 
 /* ----- !! NAVIGATION MOBILE !! ----- *//* ----- !! NAVIGATION MOBILE !! ----- */
@@ -53,67 +41,64 @@
 @media only screen and (max-width: 1279px){
     
     .socialmo {
-         z-index: 999999;
-   padding-top: 15px;
-    bottom:16px;
-
-   text-align: center;
+    z-index: 999999;
+    padding-top: 30px;
+    bottom:15px;
+    text-align: center;
    
   }
  
     .social {
-        
-        
-        display: none;
+           display: none;
     }
     
 nav span {
-        vertical-align: top;
-        display: inline-block;
-        position: relative;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
     z-index: 9999;
   }
     
 
     
 .mo{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 101;
-  width: 36px;
-  height: 36px;
-     min-width: 36px;
-  min-height: 36px;
-  box-sizing: border-box;
-  padding: 11px 0 0 9px;
-  border-radius: 50%;
-  border: 1px solid rgb(0, 0, 0);
-     z-index: 1510;
-   background-color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 101;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    box-sizing: border-box;
+    padding: 11px 0 0 9px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    z-index: 1510;
+    background-color: white;
 }
 .ham {
-  display: block;
-  width: 16px;
-  height: 2px;
-  background: rgb(0, 0, 0);
-  -webkit-transition: 1s;
-  transition: 1s;
-  pointer-events: none;
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    -webkit-transition: 1s;
+    transition: 1s;
+    pointer-events: none;
     z-index: 1510;
 
 }
 .ham:nth-child(2) {
-  margin: 3px 0;
-     z-index: 1510;
+    margin: 3px 0;
+    z-index: 1510;
 }
     
 .open {
-  border-color: rgb(0, 0, 0);
-   z-index: 1510;
+    border-color: rgb(0, 0, 0);
+    z-index: 1510;
 }
 .open .ham {
-  background: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
     z-index: 1510;
 }
 .open :first-child {
@@ -124,13 +109,13 @@ nav span {
 .open :nth-child(2) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  opacity: 0;
-     z-index: 1510;
+        opacity: 0;
+        z-index: 1510;
 }
 .open :last-child {
   -webkit-transform: translateY(-5px) rotate(-135deg);
           transform: translateY(-5px) rotate(-135deg);
-     z-index: 1510;
+        z-index: 1510;
 }
 
 
@@ -139,11 +124,11 @@ nav span {
 
 
 nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
     background-color: white;
     opacity:0.95;
     overflow: auto;
@@ -162,12 +147,12 @@ nav {
     
     .imphome{
 
- vertical-align: top;
-        display: inline-block;
-        position: relative;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
     z-index: 9999;
-margin:0;
-          color: Black;
+    margin:0;
+    color: Black;
     padding-top:2px;
     text-align: center;
     text-decoration: none;
@@ -246,24 +231,24 @@ code {
     text-decoration: none;
     padding-left: 0;
     padding-right: 0;
-   font-size: 32pt;
+    font-size: 32pt;
     cursor: pointer;
     top: 0px;
     width:100%;
-   transition: 0.4s;
-        overflow: auto;
+    transition: 0.4s;
+    overflow: auto;
 }
     
      .home:hover {
-     border-bottom: 1px solid white;
-        border-left: none;
-        border-right: none;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
 }
     
     .button:hover {
-   border-bottom: 1px solid green;
-        border-left: none;
-        border-right: none;
+    border-bottom: 1px solid green;
+    border-left: none;
+    border-right: none;
 
 }
 
@@ -293,7 +278,36 @@ code {
 /* ----- !! CONTENT PC !! ----- *//* ----- !! CONTENT PC !! ----- */
 /* ----- !! CONTENT PC !! ----- *//* ----- !! CONTENT PC !! ----- */
 /* ----- !! CONTENT PC !! ----- *//* ----- !! CONTENT PC !! ----- */
+ 
+  @media only screen and (min-width: 1280px) {  
+.mydivhide {
+    
+    top:0;
+    position:fixed;
+    text-align: center;
+    background-image: linear-gradient( 
+      360deg,
+   hsla(0, 0%, 100%, 0) 1%,
+   hsl(0, 0%, 100%) 50%
+);
+    width: auto;
+    height: 100%;
+    z-index: 99;
+    left: 23%;
+    right: 23%;
+    overflow-x: hidden;
+    overflow: auto;
+    
+    }
+        
+}
 
+    
+/* ----- !! NAVIGATION PC !! ----- *//* ----- !! NAVIGATION PC !! ----- */
+/* ----- !! NAVIGATION PC !! ----- *//* ----- !! NAVIGATION PC !! ----- */
+/* ----- !! NAVIGATION PC !! ----- *//* ----- !! NAVIGATION PC !! ----- */
+
+/* -- Navi PC links --*/
 
 @media only screen and (min-width: 1280px) {
              .socialmo {
@@ -320,218 +334,27 @@ code {
    .social {
     z-index: 999999;
     position: fixed;
-
-    left: 54px;
-transform: translateX(-50%);
-   text-align: center;
+    padding-top: 10px;
+    left: 55px;
+    transform: translateX(-50%);
+    text-align: center;
     
 }
  }   
 }
-        
-   
-    
-    
-.mydivhide {
-    
-        top:0;
-        position:fixed;
-    text-align: center;
-          background-image: linear-gradient( 
-      360deg,
-   hsla(0, 0%, 100%, 0) 1%,
-   hsl(0, 0%, 100%) 50%
-);
-
-        width: auto;
-        
-       
-        height: 100%;
-    z-index: 99;
-        left: 23%;
-        right: 23%;
-    overflow-x: hidden;
-    overflow: auto;
-    
-    }
-        
-}
-
-    
-/* ----- !! NAVIGATION PC !! ----- *//* ----- !! NAVIGATION PC !! ----- */
-/* ----- !! NAVIGATION PC !! ----- *//* ----- !! NAVIGATION PC !! ----- */
-/* ----- !! NAVIGATION PC !! ----- *//* ----- !! NAVIGATION PC !! ----- */
-
-
-
-/* -- Navi PC rechts --*/
-@media only screen and (min-width: 1280px) {
-    
-
-    
-.rechts span {
-        
-        display: inline-block;
-        position: relative;
-    padding-top: 5px;
- 
-     right: 0px;
-         cursor:pointer;
-   text-align: right;
-    }
-    
-   
-    .rechts {
-        text-align: right;
-        right: 0px;
-        position: absolute;
-  top: 48%;
-  transform: translateY(-50%);
-    }
-
-
-.rechts .button {
-    
-  display: inline-block;
-    position: relative;
-    margin: auto;
-  
-  right: 0px;
-    cursor:pointer;
-    
-       
-   
-    }
-    
-    
-
-
-    
-   .rechts .button:hover {
-   opacity: 0.4;
-
 }
 
 
 
- .rechts p {
-     float: left;
-     right: 0px;
-     text-align: right;
-      color: antiquewhite;
-    font-size: 30px; 
-     padding: 10px;
-     margin: 0;
-}
-    
-    
- 
-
-  }
-
-/* -- Navi PC links --*/
 
 @media only screen and (min-width: 1280px) {
     
-
-    
-nav span {
-        
-        display: inline-block;
-        position: relative;
-    padding-top: 5px;
- 
-    
-         cursor:pointer;
-   
-    }
-    
-   
-    nav {
-        
-   
-        position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-    }
-
-
-
-
-
-
-    
-
-.button {
-    
-  display: inline-block;
-    position: relative;
-    margin: auto;
-  
-  left: 0;
-    cursor:pointer;
-    
-       
-   
-    }
-    
-    
-    
-    .home {
-    display: inline-block;
-    position: relative;
-    margin: auto;
-  
- 
-     left: 0;
- 
-cursor:pointer;
-       
-
-}
-    
-     .home:hover {
- opacity: 0.4;
-
-}
-    
-    .button:hover {
-   opacity: 0.4;
-
-}
-
-
-
- nav p {
-     
-     text-align: center;
-      color: antiquewhite;
-    font-size: 30px; 
-     padding: 10px;
-     margin: 0;
-}
-    
-    
-     .info {
-        
-        text-align: left;
-    }
-    
-    
- 
- .impressum:hover {
-    
-  
-       border-bottom: 2px solid rgba(255, 255, 255, 0);
-     border-radius:0px;
-} 
-
 .imphome{
 
-
-font-size: 10pt;
-    margin-top: 40px;
-    left: 10px;
+    position: fixed;
+    font-size: 10pt;
+    margin-top: 50px;
+    left: 2px;
     width: 10%;
 
 
@@ -554,19 +377,144 @@ text-decoration: none;
     opacity: 0.3;
 }
 
+    
+nav span {
+        
+    display: inline-block;
+    position: relative;
+    padding-top: 5px;
+    cursor:pointer;
+   
+    }
+    
+   
+    nav {
+        
+   
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+
+
+
+
+
+
+    
+
+.button {
+    
+    display: inline-block;
+    position: relative;
+    margin: auto; 
+    left: 0;
+    cursor:pointer;
+    
+       
+   
+    }
+    
+    
+    
+    .home {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    left: 0;
+    cursor:pointer;
+       
+
+}
+    
+     .home:hover {
+    opacity: 0.4;
+
+}
+    
+    .button:hover {
+   opacity: 0.4;
+
+}
+
+
+
+ nav p {
+     
+    text-align: center;
+    color: antiquewhite;
+    font-size: 30px; 
+    padding: 10px;
+    margin: 0;
+}
+    
+    
+     .info {
+        
+    text-align: left;
+    }
+    
+    
+
   }
 
 
+/* -- Navi PC rechts --*/
+@media only screen and (min-width: 1280px) {
+    
+
+    
+.rechts span {
+        
+    display: inline-block;
+    position: relative;
+    padding-top: 5px;
+    right: 0px;
+    cursor:pointer;
+    text-align: right;
+    }
+    
+   
+    .rechts {
+    text-align: right;
+    right: 0px;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    }
 
 
+.rechts .button {
+    
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    right: 0px;
+    cursor:pointer;
+      
+    }
+ 
+   .rechts .button:hover {
+   opacity: 0.4;
+
+}
+
+
+ .rechts p {
+    float: left;
+    right: 0px;
+    text-align: right;
+    color: antiquewhite;
+    font-size: 30px; 
+    padding: 10px;
+    margin: 0;
+}
+  }
 
 
 /* ----- !! MEDIABOX !! ----- *//* ----- !! MEDIABOX !! ----- */
 /* ----- !! MEDIABOX !! ----- *//* ----- !! MEDIABOX !! ----- */
 /* ----- !! MEDIABOX !! ----- *//* ----- !! MEDIABOX !! ----- */
-
-
-
 
 
 /* original */
@@ -578,13 +526,10 @@ text-decoration: none;
 }
 
 
-
 #download .mediaboxhome {
     height: 43px;
     
-    
-    
-    
+
     
 }
 .mediaboxhome p {
@@ -640,10 +585,6 @@ margin-bottom: 5px;
 }
 
 
-
-
-
-
 @media screen and (max-width:1026px) {
 	.tabs nav a span {
 		display: none;
@@ -665,19 +606,14 @@ margin-bottom: 5px;
 		float: left;
 		margin: 0 25px 10px 0;
 		max-width: 40%;
-         border: 1px solid white;
+        border: 1px solid white;
 	}
     
-   
-    
-    
-    
+  
     	.mediabox iframe {
 		float: left;
 		margin: 0 25px 10px 0;  
-            max-width: 40%;
-            
-                
+        max-width: 40%;             
 	}
    
 
